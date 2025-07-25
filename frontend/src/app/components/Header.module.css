@@ -1,0 +1,140 @@
+.header {
+  background-color: #222222;
+  width: 100%;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 3%;
+  height: 110px;
+}
+
+.headerTopLeft h2 {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.headerTopRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 5%;
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.svgIcon {
+  fill: white;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.svgIcon:hover {
+  fill: grey;
+}
+
+.searchBar {
+  background-color: #333;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 40px 8px 10px;
+  font-size: 1rem;
+  background-color: #444;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+.closeSearch {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.headerDivider {
+  border: none;
+  height: 1px;
+  background-color: #2f2f2f;
+  margin: 0;
+}
+
+.headerBottom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px 0;
+  margin-block-start: 10px;
+  padding-inline-start: 10px;
+  margin-bottom: 0;
+}
+
+.navItem {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 20px;
+  color: #fff9;
+  font-weight: bold;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: grey;
+  transition: color 0.2s ease;
+  display: inline-block;
+  padding-bottom: 16px;
+}
+
+.activeLink a {
+  color: white;
+  padding-bottom: 16px;
+}
+
+.link a:hover {
+  color: white;
+  padding-bottom: 16px;
+  cursor: pointer;
+}

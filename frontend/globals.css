@@ -1,0 +1,64 @@
+:root {
+    --background: #ffffff;
+    --space-unit: 0.25rem;
+    --space-xs: calc(2 * var(--space-unit));    
+    --space-sm: calc(4 * var(--space-unit));    
+    --space-md: calc(8 * var(--space-unit));    
+    --space-lg: calc(16 * var(--space-unit));   
+    --space-xl: calc(24 * var(--space-unit));   
+    --space-xxl: calc(32 * var(--space-unit));    
+     
+     
+     --section-spacing-standard: var(--space-md);
+     --section-spacing-large: var(--space-xl);
+     --section-spacing-xlarge: var(--space-xxl);
+     --component-spacing: var(--space-sm);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
+  
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
