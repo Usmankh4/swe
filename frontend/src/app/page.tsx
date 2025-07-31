@@ -29,22 +29,25 @@ export default async function Home() {
   ];
 
   return (
-    <div className="w-full max-w-full mx-auto p-0 overflow-x-hidden">
-      <main className="">
+    <div className="w-full overflow-x-hidden">
+      <main>
+        {/* HERO SECTION */}
         <section className="bg-white py-16 px-8 mb-12">
-          <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 text-center lg:text-left">
+          <div className="max-w-[1440px] mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-16 text-center lg:text-left">
             <div className="flex-1 max-w-xl">
               <h1 className="text-5xl font-extrabold text-[#1a1a1a] mb-6 leading-tight">Premium Phones & Expert Repairs</h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">Shop the latest smartphones or get your device fixed by certified technicians</p>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Shop the latest smartphones or get your device fixed by certified technicians
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
                 <Link href="/products/phones" className="btn btn-primary">Shop Phones</Link>
                 <Link href="/repair" className="btn btn-outline">Book Repair</Link>
               </div>
             </div>
             <div className="flex-1 flex justify-center items-center mt-8 lg:mt-0">
-              <Image 
-                src={bannerImage} 
-                alt="Latest Smartphones" 
+              <Image
+                src={bannerImage}
+                alt="Latest Smartphones"
                 priority
                 width={500}
                 height={670}
@@ -53,66 +56,62 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <div className="products-categories-wrapper">
-        <div className="mt-20">
-  <section className="w-full mt-8">
-    <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-0">
-      {phoneCards.map((card, index) => (
-        <Link
-          key={index}
-          href={card.link}
-          className="border-b border-l border-gray-200 text-center py-[10px] px-[40px] w-full pb-[100px] hover:bg-gray-100 cursor-pointer transition-colors duration-100 ease-in"
-        >
-          <div className="flex flex-col items-center">
-            <h2 className="mb-[10px] text-[1.2rem]">{card.name}</h2>
-            <button className="bg-transparent border-none text-[#0070f3] cursor-pointer p-0 text-[0.9rem] mb-[10px]">
-              View All
-            </button>
-            <div className="flex justify-center items-center p-[10px]">
-              <Image
-                src={card.image}
-                alt={`${card.name} product`}
-                width={243}
-                height={243}
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
-          </div>
-        </Link>
-      ))}
-    </div>
-  </section>
 
-  <section className="w-full">
-    <div className="flex items-center gap-0">
-      {categoryCards.map((card, index) => (
-        <Link
-          key={index}
-          href={card.link}
-          className="border-b border-x border-gray-200 text-center py-[10px] px-[40px] w-full mb-5 pb-[100px] hover:bg-gray-100 cursor-pointer transition-colors duration-100 ease-in"
-        >
-          <div className="flex flex-col items-center">
-            <h2 className="mb-[10px] text-[1.2rem]">{card.name}</h2>
-            <button className="bg-transparent border-none text-[#0070f3] cursor-pointer p-0 text-[0.9rem] mb-[10px]">
-              View All
-            </button>
-            <div className="flex justify-center items-center p-[10px]">
-              <Image
-                src={card.image}
-                alt={`${card.name} category`}
-                width={243}
-                height={243}
-                style={{ objectFit: 'contain' }}
-              />
+        <div className="max-w-[1440px] mx-auto px-4">
+          {/* PHONE CARDS */}
+          <section className="w-full mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+              {phoneCards.map((card, index) => (
+                <Link
+                  key={index}
+                  href={card.link}
+                  className="border border-gray-200 text-center py-10 px-6 hover:bg-gray-100 transition-colors duration-150"
+                >
+                  <div className="flex flex-col items-center">
+                    <h2 className="mb-2 text-lg font-semibold">{card.name}</h2>
+                    <button className="text-blue-500 text-sm mb-3">View All</button>
+                    <div className="p-2">
+                      <Image
+                        src={card.image}
+                        alt={`${card.name} product`}
+                        width={243}
+                        height={243}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </div>
-        </Link>
-      ))}
-    </div>
-  </section>
-</div>
-</div>
-        
+          </section>
+
+          
+          <section className="w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              {categoryCards.map((card, index) => (
+                <Link
+                  key={index}
+                  href={card.link}
+                  className="border border-gray-200 text-center py-10 px-6 hover:bg-gray-100 transition-colors duration-150"
+                >
+                  <div className="flex flex-col items-center">
+                    <h2 className="mb-2 text-lg font-semibold">{card.name}</h2>
+                    <button className="text-blue-500 text-sm mb-3">View All</button>
+                    <div className="p-2">
+                      <Image
+                        src={card.image}
+                        alt={`${card.name} category`}
+                        width={243}
+                        height={243}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        </div>
       </main>
     </div>
   );
