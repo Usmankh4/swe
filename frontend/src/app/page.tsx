@@ -55,14 +55,14 @@ export default async function Home() {
         </section>
         <div className="mt-20 max-w-[1200px] mx-auto px-5">
   <section className="w-full mt-8">
-      <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-0">
+      <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-0 justify-items-center">
       {phoneCards.map((card, index) => (
         <Link
           key={index}
           href={card.link}
-          className="border-b border-l border-[#f0f0f0] text-center py-[10px] px-[40px] w-full pb-[100px] hover:bg-[#f0f0f0] cursor-pointer transition-colors duration-100 ease-in"
+          className="border-b border-l border-[#f0f0f0] text-center py-[10px] px-[40px] w-full pb-[100px] h-[300px] hover:bg-[#f0f0f0] cursor-pointer transition-colors duration-100 ease-in"
         >
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center h-full">
             <h2 className="mb-[10px] text-[1.2rem]">{card.name}</h2>
             <button className="bg-transparent border-none text-[#0070f3] cursor-pointer p-0 text-[0.9rem] mb-[10px]">
               View All
@@ -83,14 +83,14 @@ export default async function Home() {
   </section>
 
   <section className="w-full">
-    <div className="flex items-center gap-0">
+    <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-0 justify-items-center">
       {categoryCards.map((card, index) => (
         <Link
           key={index}
           href={card.link}
-          className="border-b border-x border-[#f0f0f0] text-center py-[10px] px-[40px] w-full mb-5 pb-[100px] hover:bg-[#f0f0f0] cursor-pointer transition-colors duration-100 ease-in"
+          className="border-b border-x border-[#f0f0f0] text-center py-[10px] px-[40px] w-full mb-5 pb-[100px] h-[300px] hover:bg-[#f0f0f0] cursor-pointer transition-colors duration-100 ease-in"
         >
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center h-full">
             <h2 className="mb-[10px] text-[1.2rem]">{card.name}</h2>
             <button className="bg-transparent border-none text-[#0070f3] cursor-pointer p-0 text-[0.9rem] mb-[10px]">
               View All
