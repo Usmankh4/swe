@@ -53,7 +53,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <div className="mt-20">
+        <div className="mt-20 max-w-[1200px] mx-auto px-5">
   <section className="w-full mt-8">
       <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-0">
       {phoneCards.map((card, index) => (
