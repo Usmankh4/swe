@@ -1,4 +1,4 @@
-import { FlashDealsArraySchema, FlashDealRaw, FlashDeal } from './types';
+import { FlashDeal } from './types';
 
 // Mock data for development
 const MOCK_FLASH_DEALS: FlashDeal[] = [
