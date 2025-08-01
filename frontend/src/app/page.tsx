@@ -65,7 +65,7 @@ export default async function Home() {
                 <Link
                   key={index}
                   href={card.link}
-                  className="border border-gray-200 text-center py-10 px-6 hover:bg-gray-100 transition-colors duration-150"
+                  className="border border-gray-200 text-center py-10 px-6 hover:bg-gray-200 transition-colors duration-150"
                 >
                   <div className="flex flex-col items-center">
                     <h2 className="mb-2 text-lg font-semibold">{card.name}</h2>
@@ -92,7 +92,7 @@ export default async function Home() {
                 <Link
                   key={index}
                   href={card.link}
-                  className="border border-gray-200 text-center py-10 px-6 hover:bg-gray-100 transition-colors duration-150"
+                  className="border border-gray-200 text-center py-10 px-6 hover:bg-gray-200 transition-colors duration-150"
                 >
                   <div className="flex flex-col items-center">
                     <h2 className="mb-2 text-lg font-semibold">{card.name}</h2>
