@@ -1,10 +1,10 @@
 # Python
 __pycache__/
+*.pyc
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -67,4 +67,3 @@ build/
 *.tsbuildinfo
 next-env.d.ts
 
-.env.local
