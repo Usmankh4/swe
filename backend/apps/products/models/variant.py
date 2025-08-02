@@ -1,5 +1,5 @@
 from django.db.models.fields import related
-from django.utils.http import MAX_URL_LENGTH
+
 
 
 class PhoneVariant(models.Model):

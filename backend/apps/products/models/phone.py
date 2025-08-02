@@ -3,10 +3,7 @@ from .abstract_product import AbstractProduct
 from .brand import Brand
 
 class Phone(AbstractProduct):
-    """
-    Model representing a phone product.
-    Inherits common fields from AbstractProduct.
-    """
+    
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name='phones')
     model = models.CharField(max_length=100)
     release_year = models.PositiveIntegerField()
