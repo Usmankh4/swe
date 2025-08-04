@@ -12,7 +12,7 @@ class Phone(AbstractProduct):
     storage_capacity = models.PositiveIntegerField(help_text="Storage in GB")
     ram = models.PositiveIntegerField(help_text="RAM in GB")
     
-    class Meta(AbstractProduct.Meta):
+    class Meta:
         ordering = ['-release_year', 'brand__name', 'model']
     
     def __str__(self):

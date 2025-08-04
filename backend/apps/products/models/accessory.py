@@ -16,7 +16,7 @@ class Accessory(AbstractProduct):
     accessory_type = models.CharField(max_length=50, choices=ACCESSORY_TYPES)
     compatible_with = models.ManyToManyField('Phone', related_name='compatible_accessories', blank=True)
     
-    class Meta(AbstractProduct.Meta):
+    class Meta:
         verbose_name_plural = 'Accessories'
         ordering = ['accessory_type', 'brand__name', 'name']
     
