@@ -1,3 +1,12 @@
+"""Admin registrations for repair models."""
+
 from django.contrib import admin
 
-# Register your models here.
+from .models import Repair
+
+
+@admin.register(Repair)
+class RepairAdmin(admin.ModelAdmin):
+    list_display = ("id", "user", "device", "status", "created_at")
+    list_filter = ("status", "created_at")
+
