@@ -20,5 +20,5 @@ class Appointment(models.Model):
     class Meta:
         ordering = ["scheduled_for"]
 
-    def __str__(self) -> str:  # pragma: no cover - simple representation
+    def __str__(self) -> str:  
         return f"{self.customer_name} @ {self.scheduled_for:%Y-%m-%d %H:%M}"
